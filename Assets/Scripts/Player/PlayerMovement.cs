@@ -48,10 +48,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //float x = Input.GetAxis("Horizontal");
-        //float z = Input.GetAxis("Vertical");
-        float x = joystick.Horizontal;
-        float z = joystick.Vertical;
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");   
 
         animator.SetFloat("speed", Mathf.Abs(x) + Mathf.Abs(z));
 
